@@ -1,11 +1,7 @@
-// ask player name
 let playerName = prompt("Enter your name:");
 console.log("Welcome " + playerName + "! Let's play Rock Paper Scissors!");
-
-// computer choice
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
-
     if (num === 0) {
         return "rock";
     } else if (num === 1) {
@@ -14,14 +10,10 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-
-// human choice
 function getHumanChoice() {
     let choice = prompt("Choose rock, paper or scissors:");
     return choice.toLowerCase();
 }
-
-// play one round
 function playRound(humanChoice, computerChoice) {
 
     console.log("You chose: " + humanChoice);
@@ -62,8 +54,6 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 }
-
-// full game
 function playGame() {
 
     let humanScore = 0;
@@ -103,6 +93,4 @@ function playGame() {
         console.log("The game is a tie!");
     }
 }
-
-// start game
 playGame();
